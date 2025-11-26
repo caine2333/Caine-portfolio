@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caine | Portfolio</title>
+    <!-- 引入 Google Fonts (Inter 字体) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- 引入 AOS 动画库 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- 引入 FontAwesome 图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav class="navbar">
+    <div class="logo">Caine.许伍馨</div>
+    <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Work</a></li>
+        <li><a href="#tech">Tools</a></li>
+    </ul>
+</nav>
+
+<!-- 1. Hero Section -->
+<section id="hero" class="hero">
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+        <h1>Design. Code. Create.</h1>
+        <p>I'm Caine, transforming complex logic into elegant experiences.</p>
+        <a href="#portfolio" class="btn">View My Work</a>
+    </div>
+</section>
+
+<!-- About Me Section -->
+
+<section class="container about-section" data-aos="fade-up">
+    <h2 class="section-title" data-aos="fade-up">About Me</h2>
+    <div class="about-content">
+
+        <!-- 左侧：图片区域 -->
+        <div class="about-image-wrapper">
+            <!-- 确保 src 路径正确，不要加固定的 width/height 属性 -->
+            <img src="assets/image/me.jpg" alt="About Me Image" class="about-avatar">
+        </div>
+
+        <!-- 右侧：文字区域 -->
+        <!-- 右侧：文字区域 -->
+        <div class="about-text">
+            <span class="tag">WHO AM I</span>
+            <h2>许伍馨 (Caine)</h2>
+            <h3>Full Stack Developer & Tech Educator</h3>
+
+            <!-- 1. 个人简介 -->
+            <p class="about-description">
+
+                我毕业于<strong>广西大学</strong>，拥有扎实的技术底蕴（Java/Python/SQL）。我的职业生涯充满了多样性：从在<strong>中国联通</strong>保障 5G 峰会的 IT 运维，到作为<strong>实施工程师</strong>主导多家三甲医院的系统上线，再到转型<strong>编程教学主管</strong>将复杂的代码逻辑传授给下一代。
+                <br>
+                我热衷于用技术解决实际问题，同时也擅长视频拍摄与活动策划。现在的我，正在寻找下一个能结合技术与创造力的挑战。
+            </p>
+
+            <!-- 2. 经历时间轴 -->
+            <div class="timeline">
+
+                <!-- Item 1: 教育培训 -->
+                <div class="timeline-item">
+                    <div class="timeline-year">2022.04 - 2024.02</div>
+                    <div class="timeline-content">
+                        <h4>教学主管 & 编程教师</h4>
+                        <span class="timeline-company">永福县卓迩教育</span>
+                        <p>负责源码熊编程课程的教研与教学管理，带领团队入校授课，培训新教师。</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: 实施工程师 -->
+                <div class="timeline-item">
+                    <div class="timeline-year">2021.09 - 2022.04</div>
+                    <div class="timeline-content">
+                        <h4>实施工程师</h4>
+                        <span class="timeline-company">东华医为科技有限公司</span>
+                        <p>参与桂林南溪山医院及北海人民医院的门诊/住院系统上线与运维，保障医疗数据流转。</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: 联通实习 -->
+                <div class="timeline-item">
+                    <div class="timeline-year">2020.11 - 2021.01</div>
+                    <div class="timeline-content">
+                        <h4>IT 运营组实习</h4>
+                        <span class="timeline-company">中国联通广西区公司</span>
+                        <p>参与“联通 5G 峰会”展览讲解与现场技术支持，撰写项目总结报告。</p>
+                    </div>
+                </div>
+
+                <!-- Item 4: 教育经历 -->
+                <div class="timeline-item">
+                    <div class="timeline-year">2018.09 - 2021.07</div>
+                    <div class="timeline-content">
+                        <h4>计算机科学与技术 (本科)</h4>
+                        <span class="timeline-company">广西大学</span>
+                        <p>主修 C/Java/Python、数据结构、操作系统等核心课程。</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- 3. Portfolio (关键部分) -->
+<section id="portfolio" class="section bg-grey">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Selected Projects</h2>
+        <div class="portfolio-grid">
+
+            <!-- Project 1: Echo Class -->
+            <div class="project-card" data-aos="fade-up" onclick="openModal('Echo Class', 'assets/pdf/echo class.pdf')">
+                <!--<div class="card-image echo-bg"></div> -->
+                <div class="card-image echo-bg"></div>
+                <div class="card-content">
+                    <span class="tag">WeChat Mini Program</span>
+                    <h3>ECHO CLASS</h3>
+                    <p>基于情感感知的互动教学系统。利用 Python/SVM 进行弹幕情感分析，构建师生双向反馈闭环。</p>
+                    <div class="tech-tags">
+                        <span>SpringBoot</span><span>Python</span><span>ECharts</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: CommunityGuard -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100" onclick="openModal('CommunityGuard','assets/pdf/community gurad.pdf')" >
+                <div class="card-image guard-bg"></div>
+                <div class="card-content">
+                    <span class="tag">Cloud Dev</span>
+                    <h3>CommunityGuard</h3>
+                    <p>社区疫情防控管理系统。集成二维码生成API与订阅消息，实现出入户自动化管理。</p>
+                    <div class="tech-tags">
+                        <span>WXML</span><span>Cloud Functions</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: ReelSynapse -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200" onclick="openModal('ReelSynapse','assets/pdf/reelsynapse.pdf')">
+                <div class="card-image reel-bg"></div>
+                <div class="card-content">
+                    <span class="tag">Desktop App</span>
+                    <h3>ReelSynapse</h3>
+                    <p>影碟零售中台系统。严谨的数据库设计，包含完整的存储过程与事务处理。</p>
+                    <div class="tech-tags">
+                        <span>C#</span><span>SQL Server</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: CrackVision -->
+            <div class="project-card" data-aos="fade-up"onclick="openModal('CrackVision','assets/pdf/CrackVision.pdf')">
+                <div class="card-image crack-bg"></div>
+                <div class="card-content">
+                    <span class="tag">AI / Vision</span>
+                    <h3>CrackVision</h3>
+                    <p>基于 YOLO-v4 的智能路面检测系统，实现裂缝定位与分类的实时响应。</p>
+                    <div class="tech-tags">
+                        <span>YOLO</span><span>Python</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: CompileCore -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100"onclick="openModal('CompileCore','assets/pdf/compilecore.pdf')">
+                <div class="card-image compile-bg"></div>
+                <div class="card-content">
+                    <span class="tag">System Software</span>
+                    <h3>CompileCore</h3>
+                    <p>C语言编译全流程可视化工具。将词法分析、语法树、四元式生成过程直观呈现。</p>
+                    <div class="tech-tags">
+                        <span>C</span><span>Assembly</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- 4. Tech Stack -->
+<section id="tech" class="section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Tech Stack</h2>
+        <div class="tech-grid">
+            <!-- 图标可以用 FontAwesome 或者 SVG -->
+            <div class="tech-item" data-aos="zoom-in"><i class="fab fa-python"></i><span>Python</span></div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="50"><i class="fas fa-code"></i><span>C#</span></div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-database"></i><span>SQL</span></div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="150"><i class="fab fa-js"></i><span>JavaScript</span></div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="200"><i class="fab fa-figma"></i><span>Figma</span></div>
+            <div class="tech-item" data-aos="zoom-in" data-aos-delay="250"><i class="fas fa-terminal"></i><span>C</span></div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2023 Caine Portfolio. Designed with minimalist philosophy.</p>
+</footer>
+<!-- macOS Style Modal Overlay -->
+<div id="pdfModal" class="modal-overlay">
+    <div class="mac-window">
+        <div class="mac-title-bar">
+            <div class="mac-buttons">
+                <span class="mac-btn close-btn" onclick="closeModal()"></span>
+                <span class="mac-btn min-btn"></span>
+                <span class="mac-btn max-btn"></span>
+            </div>
+            <div class="mac-title" id="modalTitle">Project Preview</div>
+        </div>
+        <div class="mac-content">
+            <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+            <div class="loading-spinner">Loading PDF...</div>
+        </div>
+    </div>
+</div>
+<!-- 脚本 -->
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js">
+    // 初始化动画库
+    AOS.init({
+        once: true, // 动画只执行一次
+        offset: 100,
+        duration: 800,
+        easing: 'cubic-bezier(0.25, 1, 0.5, 1)', // Apple风格的丝滑曲线
+    });
+
+    // --- 模态框控制逻辑 ---
+    const modal = document.getElementById('pdfModal');
+    const pdfFrame = document.getElementById('pdfFrame');
+    const modalTitle = document.getElementById('modalTitle');
+
+    // 简单的导航栏滚动效果
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+
+
+    });
+
+    // ... openModal 和 closeModal 函数 ...
+    function openModal(title, pdfPath) {
+        console.log("Clicked!", title); // ★ 添加这行测试代码
+        // ...其余代码
+    }
+</script>
+</body>
+</html>
